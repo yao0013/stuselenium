@@ -1,6 +1,6 @@
-import unittest2
+import unittest
 
-class Test(unittest2.TestCases):
+class Test(unittest.TestCase):
 
     def setUp(self):
         number = input("number")
@@ -13,4 +13,4 @@ class Test(unittest2.TestCases):
         pass
 
 if __name__ == '__main__':
-    unittest2.mian()
+    unittest.mian()
