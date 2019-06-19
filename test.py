@@ -5,8 +5,8 @@ class TestCount:
     def test_add(self):
         try:
             j = Count(2,3)
-            add = j.add()
-            assert (add == 5),'Intreger addition result error!'
+            add = j.mult()
+            assert (add == 6),'Intreger addition result error!'
         except AssertionError as msg:
             print(msg)
         else:
