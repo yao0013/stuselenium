@@ -1,6 +1,6 @@
 from selenium import webdriver
 import unittest
-from HTMLTestRunner import HTMLTestRunner
+from HtmlTestRunner import HTMLTestRunner
 
 class Badidu(unittest.TestCase):
 
