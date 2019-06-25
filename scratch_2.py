@@ -2,6 +2,7 @@ from selenium import webdriver
 from selenium.webdriver.common.action_chains import ActionChains
 from time import sleep
 from selenium.webdriver.common.keys import Keys
+import threading
 
 driver = webdriver.Chrome()
 driver.get("http://www.baidu.com")
