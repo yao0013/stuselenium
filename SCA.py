@@ -13,10 +13,12 @@ actors = re.findall('<p class="star">(.*?)</p>',html,re.S)
 
 times = re.findall('<p class="releasetime">(.*?)</p>',html,re.S)
 
-scores = re.findall('<p class="score"><i class="integer">([0-9]\.)</i><i class="fraction">([0-9])</i>',html,re.S)
+fen1 = re.findall('<p class="score"><i class="integer">(\d\.)',html,re.S)
+
+fen2 = re.findall('</i><i class="fraction">(\d)</i>',html,re.S)
 
 
-for name in names:
+'''for name in names:
     print(name)
 
 for actor in actors:
@@ -25,5 +27,8 @@ for actor in actors:
 for time in times:
     print(time)
 
-for score in scores:
-    print(score)
+for c, n in zip(fen1, fen2):
+    print(f"评分： {c}{n}")'''
+
+for name, actor, time, c, n in zip(names, actors, times, fen1, fen2):
+    print(f" {name} , {actor.strip()} , {time} , 评分：{c}{n} ")
