@@ -10,4 +10,4 @@ html = resq.text
 names = re.findall('<h2>(.*?)</h2>',html,re.S)
 
 for name in names:
-    print(name)
+    print(name.strip())
